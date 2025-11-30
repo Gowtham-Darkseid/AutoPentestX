@@ -1,0 +1,93 @@
+{
+  "app_name": "AutoPentestX",
+  "version": "1.0.0",
+  "description": "Automated Penetration Testing & Vulnerability Assessment Toolkit",
+  
+  "scan_settings": {
+    "default_safe_mode": true,
+    "timeout": 300,
+    "max_ports": 65535,
+    "scan_techniques": {
+      "tcp_scan": true,
+      "udp_scan": true,
+      "service_detection": true,
+      "os_detection": true,
+      "version_detection": true
+    }
+  },
+  
+  "vulnerability_scanning": {
+    "nikto_enabled": true,
+    "sqlmap_enabled": true,
+    "nikto_timeout": 300,
+    "sqlmap_timeout": 180,
+    "max_web_crawl_depth": 2
+  },
+  
+  "cve_lookup": {
+    "enabled": true,
+    "api_url": "https://cve.circl.lu/api",
+    "nvd_api_url": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+    "max_results_per_service": 10,
+    "cache_results": true
+  },
+  
+  "exploitation": {
+    "safe_mode_default": true,
+    "metasploit_enabled": true,
+    "max_exploit_attempts": 5,
+    "generate_rc_scripts": true
+  },
+  
+  "risk_scoring": {
+    "cvss_thresholds": {
+      "critical": 9.0,
+      "high": 7.0,
+      "medium": 4.0,
+      "low": 0.1
+    },
+    "weight_factors": {
+      "exploitable": 2.0,
+      "public_exploit": 1.5,
+      "network_accessible": 1.3,
+      "authenticated": 0.7
+    }
+  },
+  
+  "reporting": {
+    "format": "pdf",
+    "generate_json": true,
+    "include_screenshots": false,
+    "confidential_watermark": true,
+    "default_tester_name": "AutoPentestX Team"
+  },
+  
+  "database": {
+    "type": "sqlite",
+    "path": "database/autopentestx.db",
+    "backup_enabled": true,
+    "retention_days": 90
+  },
+  
+  "logging": {
+    "enabled": true,
+    "level": "INFO",
+    "log_dir": "logs",
+    "max_log_size_mb": 10,
+    "backup_count": 5
+  },
+  
+  "output": {
+    "reports_dir": "reports",
+    "logs_dir": "logs",
+    "database_dir": "database",
+    "exploits_dir": "exploits"
+  },
+  
+  "network": {
+    "user_agent": "Mozilla/5.0 (AutoPentestX Security Scanner)",
+    "request_timeout": 30,
+    "max_retries": 3,
+    "rate_limit_delay": 1
+  }
+}

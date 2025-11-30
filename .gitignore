@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# AutoPentestX specific
+reports/*.pdf
+logs/*.log
+database/*.db
+database/*.db-journal
+exploits/*.rc
+
+# Keep directory structure
+!reports/.gitkeep
+!logs/.gitkeep
+!database/.gitkeep
+!exploits/.gitkeep
+
+# Sensitive data
+*.key
+*.pem
+*.crt
+config_local.json
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Metasploit
+*.msf4
+.msf4/

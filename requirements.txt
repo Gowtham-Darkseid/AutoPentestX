@@ -1,0 +1,4 @@
+python-nmap==0.7.1
+requests>=2.31.0
+reportlab>=4.0.4
+sqlparse>=0.4.4
